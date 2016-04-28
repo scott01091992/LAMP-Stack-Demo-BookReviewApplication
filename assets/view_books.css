@@ -1,0 +1,18 @@
+
+body{
+	padding: 20px;
+}
+#welcome{
+	font-size: 20px;
+}
+#add_book{
+	margin-right: 10px;
+}
+#otherbooks{
+
+}
+.review_box{
+	margin-bottom: 10px;
+	border: 1px solid black;
+	padding: 10px;
+}

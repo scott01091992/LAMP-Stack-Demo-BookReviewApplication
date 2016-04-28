@@ -1,0 +1,13 @@
+.book{
+	margin-left: 20px;
+}
+#home{
+	border-right: 1px solid black;
+	padding-right: 4px;
+	margin-right: 2px;
+}
+#logout{
+	border-left: 1px solid black;
+	margin-left: 2px;
+	padding-left: 4px;
+}
