@@ -8,15 +8,20 @@
 	<body>
 		<div class='container'>
 			<div class='row'>
-				<div class='col-xs-offset-7'>
-					<a id='home' href='/books'>Home</a>
-					<a href='/books/add'>Add Book and Review</a>
-					<a id='logout' href='/logout'>Logout</a>
+				<div class='nav_bar'>
+					<img id='logo' src='/assets/paypyr.png'>
+			
+					<a id='home' href='/books'>Home </a>
+
+					<a id='logout' href='/logout'> Logout </a>
+					
 				</div>
 			</div>
 			<div class='row'>
 				<div class='col-xs-12'>
 					<h3>User Alias: <?= $data[0]['alias'] ?></h3>
+				</div>
+				<div class='col-xs-12'>
 					<h5>Name: <?= $data[0]['name'] ?></h5>
 					<h5>Email: <?= $data[0]['email'] ?></h5>
 					<h5>Total Reviews: <?= COUNT($data) ?></h5><hr>

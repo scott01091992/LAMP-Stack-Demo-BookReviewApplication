@@ -1,18 +1,77 @@
-
+@font-face {
+    font-family: paper_font;
+    src: url("Cocomat Light-trial.ttf");
+}
+@font-face {
+    font-family: heading;
+    src: url("Orkney-Light.otf");
+}
 body{
-	padding: 20px;
+	font-family: paper_font;
+	padding: 60px;
+	background-image: url("sea.jpg");
+}
+a{
+	text-decoration: none;
+	color: #B24D35;
+}
+a:hover{
+	text-decoration: none;
+	color: #638EA1;
+}
+.heading{
+	font-family: heading; 
 }
 #welcome{
-	font-size: 20px;
+    font-size: 1.8em;
+    margin: 0;
+    padding: 4px;
+    display: inline-block;
 }
-#add_book{
-	margin-right: 10px;
-}
-#otherbooks{
+.review_text{
+	text-shadow: none;
 
 }
-.review_box{
-	margin-bottom: 10px;
-	border: 1px solid black;
+#add_book, #logout{
 	padding: 10px;
+	font-weight: bold;
+	font-size: 1.5em;
+	box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.8);
+}
+#otherbooks{
+	text-align: center;
+	font-size: 1.3em;
+}
+.review_head{
+	text-align: center;
+	font-size: 3em;
+	margin-top: 20px;
+}
+.links_box{
+	text-align: right;
+}
+.nav_bar{
+
+}
+.logo{
+	width: 50%;
+	margin-right: 5%;
+}
+.review_box{
+	width: 29%;
+	height: 250px;
+	margin: 2%;
+	display: inline-block;
+	font-size: 1.3em;
+	vertical-align: top;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.63);
+	padding: 10px;
+	overflow: hidden;
+}
+.booklink{
+	font-size: 30px;
+	font-weight: bold;
 }

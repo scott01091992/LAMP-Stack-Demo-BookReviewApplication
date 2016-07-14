@@ -8,8 +8,8 @@
 	<body>
 		<div class='container'>
 			<div class='row'>
-				<div class='col-xs-12'>
-					<h1>Welcome!</h1>
+				<div class='col-xs-12  heading' >
+					<img id='logo' src='/assets/paypyr.png'>
 				</div>
 			</div>
 			<div class='row'>
@@ -24,7 +24,7 @@
 							echo "<span class='success'>".$this->session->flashdata('success')."</span>"; 
 						} 
 					?>
-					<h4>Register</h4>
+					<h4 class='heading'>Register</h4>
 					<form action='/register' method='post' role='form'>
 						<div class='form-group'>
 							<label for='name'>Name: <?= "<span class='fail'>".form_error('name')."</span>" ?></label>
@@ -47,11 +47,11 @@
 							<label for='confirm'>Confirm PW: <?= "<span class='fail'>".form_error('confirm')."</span>" ?></label>
 							<input type='password' name='confirm' class='form-control'>
 						</div>
-						<button type='submit' class='btn btn-default'>Register</button>
+						<button type='submit' class='custom_button'>Register</button>
 					</form>
 				</div>
 				<div class='col-sm-6' class='col-xs-12'>
-					<h4>Log in</h4>
+					<h4 class='heading'>Log in</h4>
 					<?= "<span class='fail'>".$this->session->flashdata('login_fail')."</span>" ?>
 					<form action='login' method='post' role='form'>
 						<div class='form-group'>
@@ -62,7 +62,7 @@
 							<label for='login_password'>Password: <?= "<span class='fail'>".form_error('login_password')."</span>" ?></label>
 							<input type='password' name='login_password' class='form-control'>
 						</div>
-						<button type='submit' class='btn btn-default'>Login</button>
+						<button type='submit' class='custom_button'>Login</button>
 					</form>
 				</div>
 			</div>

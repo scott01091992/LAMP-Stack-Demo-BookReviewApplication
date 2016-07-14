@@ -1,13 +1,44 @@
+@font-face {
+    font-family: paper_font;
+    src: url("Cocomat Light-trial.ttf");
+}
+@font-face {
+    font-family: heading;
+    src: url("Orkney-Light.otf");
+}
+body{
+	font-family: paper_font;
+	padding: 60px;
+	background-image: url("sea.jpg");
+}
 .book{
 	margin-left: 20px;
 }
-#home{
-	border-right: 1px solid black;
-	padding-right: 4px;
-	margin-right: 2px;
+
+a{
+	text-decoration: none;
+	color: #B24D35;
 }
-#logout{
-	border-left: 1px solid black;
-	margin-left: 2px;
-	padding-left: 4px;
+a:hover{
+	text-decoration: none;
+	color: #638EA1;
+}
+h3{
+	font-size: 2em;
+	display: inline-block;
+}
+#home, #logout{
+	padding: 10px;
+	font-weight: bold;
+	font-size: 1.5em;
+	box-shadow: 3px 3px 10px 0px rgba(50, 50, 50, 0.8);
+	margin-left: 10px;
+}
+#logo{
+	height: 25%;
+	width: 48%;
+	display: inline;
+	margin-bottom: 20px;
+	padding: 0;
+	margin-right: 30%;
 }

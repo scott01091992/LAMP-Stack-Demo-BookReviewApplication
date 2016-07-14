@@ -7,15 +7,17 @@
 	</head>
 	<body>
 		<div class='container'>
-			<div class='row'>
-				<div class='col-xs-offset-9'>
+			<div class='row title_row'>
+				<div class='col-xs-9 '>
+					<h3>Add a New Book Title and a Review</h3>
+				</div>
+				<div class='col-xs-3 title_row'>
 					<a id='home' href='/books'>Home</a>
 					<a id='logout' href='/logout'>Logout</a>
-				</div>
+				</div>					
 			</div>
 			<div class='row'>
-				<div class='col-sm-7' class='col-xs-12'>
-					<h4>Add a New Book Title and a Review</h4>
+				<div class='col-xs-12'>
 					<form role='form' action='/add_book' method='post'>
 						<div class='form-group'>
 							<label for='book_title'>Book Title: <?= "<span class='fail'>".form_error('book_title')."</span>" ?></label>
@@ -25,11 +27,11 @@
 						<div id='choose_author'>
 							<div class='form-group'>
 								<label for='list_author'>Choose from the list:</label>
-								<select class='selectpicker' name='list_author'>
+								<select class='selectpicker form-control' name='list_author'>
 									<option selected>None Selected</option>
 									<?php
 										foreach($authors as $author){
-											echo "<option>{$author['author']}</option>";
+											echo "<option class='author_option'>{$author['author']}</option>";
 										}
 									?>
 								</select>
@@ -41,7 +43,7 @@
 						</div>
 						<div class='form-group'>
 							<label for='review'>Review: <?= "<span class='fail'>".form_error('review')."</span>" ?></label>
-							<textarea class='form-control' name='review' rows='5'></textarea>
+							<textarea class='form-control custom_textarea' name='review' rows='5'></textarea>
 						</div>
 						<div class='form-group'>
 							<label for='rating'>Rating</label>
@@ -53,7 +55,7 @@
 							  	<option value="5">5 Stars</option>
 							</select>
 						</div>
-						<button type='submit' class='btn btn-default'>Add Book and Review</button>
+						<button type='submit' class='custom_button'>Add Book and Review</button>
 					</form>
 				</div>
 			</div>
