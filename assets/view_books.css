@@ -20,7 +20,7 @@ a:hover{
 	color: #638EA1;
 }
 .heading{
-	font-family: heading; 
+	font-family: heading;
 }
 #welcome{
     font-size: 1.8em;
@@ -30,6 +30,7 @@ a:hover{
 }
 .review_text{
 	text-shadow: none;
+  text-align: left;
 
 }
 #add_book, #logout{
@@ -59,7 +60,6 @@ a:hover{
 }
 .review_box{
 	width: 29%;
-	height: 250px;
 	margin: 2%;
 	display: inline-block;
 	font-size: 1.3em;
@@ -68,10 +68,13 @@ a:hover{
 	margin-top: 30px;
 	margin-bottom: 30px;
 	box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.63);
-	padding: 10px;
+	padding: 25px;
 	overflow: hidden;
 }
 .booklink{
 	font-size: 30px;
 	font-weight: bold;
+}
+.numbers{
+  text-align: left;
 }

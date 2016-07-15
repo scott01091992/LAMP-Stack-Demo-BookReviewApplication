@@ -12,13 +12,13 @@
 					<img id='logo' src='/assets/paypyr.png'>
 					<a id='home' href='/books'>Home</a>
 					<a id='logout' href='/logout'>Logout</a>
-					
+
 				</div>
-				
+
 			</div>
 			<div class='row'>
 				<div class='col-xs-12 col-sm-7'>
-					<span id='title'><?= $data[0]['title'] ?></span>
+					<span id='title'><?= ucwords($data[0]['title']) ?></span>
 					<h5>Author: <?= $data[0]['author'] ?></h5>
 					<h4>Reviews:</h4>
 					<?php
@@ -40,7 +40,7 @@
 					?>
 				</div>
 				<div class='col-xs-12 col-sm-5'>
-					<form role='form' action=<?= "'/post_review/{$data[0]['id']}'" ?> method='post'>
+					<form role='form' action=<?= "'/post_review/{$data[0]['book_id']}'" ?> method='post'>
 						<div class='form-group'>
 							<label for='review'>Add a Review: <?= form_error('review') ?></label>
 							<textarea name='review' class='form-control custom_textarea' rows='5' name='review'></textarea>

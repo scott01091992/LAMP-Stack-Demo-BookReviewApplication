@@ -34,7 +34,7 @@ class Book_model extends CI_Model {
 	}
 
 	public function get_book_review($id){
-		return $this->db->query("SELECT reviews.users_id, reviews.review, books.title, books.author, reviews.rating, users.name, reviews.created_at, reviews.id FROM reviews LEFT JOIN users ON reviews.users_id = users.id LEFT JOIN books ON books.id = reviews.books_id WHERE books.id = {$id}")->result_array();
+		return $this->db->query("SELECT reviews.users_id, books.id as book_id, reviews.review, books.title, books.author, reviews.rating, users.name, reviews.created_at, reviews.id FROM reviews LEFT JOIN users ON reviews.users_id = users.id LEFT JOIN books ON books.id = reviews.books_id WHERE books.id = {$id}")->result_array();
 	}
 
 	public function get_user_view($id){

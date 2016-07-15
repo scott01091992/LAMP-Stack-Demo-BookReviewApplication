@@ -15,7 +15,7 @@
 					</span>
 					<a id='add_book' href='/books/add'>Review a book</a>
 					<a id='logout' href='/logout'>Logout</a>
-					
+
 				</div>
 			</div>
 			<div class='row'>
@@ -24,18 +24,20 @@
 					<?php
 						if(COUNT($data) < 4){
 							foreach($data as $review){
+								$review_title = ucwords($review['title']);
 								echo "<div class='review_box'>
-										<a class='book_link' href='/book/{$review['bookid']}'>{$review['title']}</a>
+										<a class='book_link' href='/book/{$review['bookid']}'>{$review_title}</a>
 										<p class='grey'>Rating:";for($i=0; $i<$review['rating']; $i++){
 											echo "<img height='15' width='15' src='/assets/star.png'>";
 										}
-								echo   "</p><p><a href='/users/{$review['userid']}'>{$review['name']}</a> Says: {$review['review']}</p>
-										<p>Posted on {$review['created_at']}</p></div>";
+								echo   "<a href='/users/{$review['userid']}'>{$review['name']}</a> Says: {$review['review']}</p>
+										<p>Posted on: {$review['created_at']}</p></div>";
 							}
 						}else{
 							for($i=COUNT($data)-1; $i > COUNT($data)-4; $i--){
+								$review_title = ucwords($data[$i]['title']);
 								echo "<div class='review_box'>
-										<a href='/book/{$data[$i]['bookid']}'>{$data[$i]['title']}</a>
+										<a href='/book/{$data[$i]['bookid']}'>{$review_title}</a>
 										<p>Rating:";for($j=0; $j<$data[$i]['rating']; $j++){
 											echo "<img height='15' width='15' src='/assets/star.png'>";
 										}
@@ -53,7 +55,8 @@
 								echo "No other reviews";
 							}else{
 								for($i=COUNT($data)-4; $i>= 0; $i--){
-									echo "<p><a href='/book/{$data[$i]['bookid']}'>{$data[$i]['title']}</a></p>";
+									$book_title = ucwords($data[$i]['title']);
+									echo "<p><a href='/book/{$data[$i]['bookid']}'>{$book_title}</a></p>";
 								}
 							}
 						?>
